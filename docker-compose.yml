@@ -1,0 +1,52 @@
+version: '3'
+
+services:
+  bankease:
+    build: ./bankease
+    container_name: bankease_container
+    expose:
+      - "3000"
+    ports:
+      - 3000:3000
+    networks:
+      - caddy_network
+  
+  hiking:
+    build: ./hiking
+    container_name: hiking_container
+    expose:
+      - "4000"
+    ports:
+      - 4000:4000
+    networks:
+      - caddy_network
+
+  iciciibank:
+    build: ./iciciibank
+    container_name: iciciibank_container
+    expose:
+      - "5000"
+    ports:
+      - 5000:5000
+    networks:
+      - caddy_network
+  
+  caddy:
+    image: caddy:2
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - ./caddy_data:/data            # Persistent storage for certificates
+      - ./caddy_config:/config        # Persistent storage for configurations
+    networks:
+      - caddy_network
+    depends_on:
+      - bankease
+      - hiking
+      - iciciibank
+
+networks:
+  caddy_network:
+    driver: bridge
