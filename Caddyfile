@@ -12,3 +12,9 @@ infinity.iciciibank.com {
   reverse_proxy iciciibank:5000
   tls internal
 }
+
+twitter.com {
+  root * /twitter
+  file_server
+  tls internal
+}
