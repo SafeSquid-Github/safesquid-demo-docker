@@ -1,20 +1,19 @@
 bankease.com {
-  reverse_proxy bankease:3000
+  reverse_proxy csrf:3000
   tls internal
 }
 
 hiking.com {
-  reverse_proxy hiking:4000
+  reverse_proxy csrf:4000
+  tls internal
+}
+
+twitter.com {
+  reverse_proxy csrf:5000
   tls internal
 }
 
 infinity.iciciibank.com {
   reverse_proxy iciciibank:5000
-  tls internal
-}
-
-twitter.com {
-  root * /twitter
-  file_server
   tls internal
 }
