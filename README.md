@@ -45,10 +45,17 @@
    - Add the following entries to your `/etc/hosts` or (`C:\Windows\System32\drivers\etc\hosts` for Windows) file:
 
      ```
+     # for csrf demo
      127.0.0.1 bankease.com
      127.0.0.1 hiking.com
-     127.0.0.1 infinity.iciciibank.com
      127.0.0.1 twitter.com
+
+     # for phishing demo
+     127.0.0.1 infinity.iciciibank.com
+     127.0.0.1 infoman.com
+
+     # for crypto-mining demo
+     127.0.0.1 tictactoe.com
      ```
 
 **Note:** I recommend using Google Chrome for all simulations, as it tends to have minimal security restrictions by default, making it ideal for testing attack simulations.

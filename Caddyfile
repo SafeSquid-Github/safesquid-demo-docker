@@ -22,3 +22,9 @@ infinity.iciciibank.com {
   reverse_proxy phishing:5000
   tls internal
 }
+
+tictactoe.com {
+  root * /crypto-mining
+  file_server
+  tls internal
+}

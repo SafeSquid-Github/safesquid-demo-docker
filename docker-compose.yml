@@ -12,7 +12,7 @@ services:
       - caddy_network
   
   caddy:
-    image: caddy:2
+    build: .
     ports:
       - 80:80
       - 443:443
