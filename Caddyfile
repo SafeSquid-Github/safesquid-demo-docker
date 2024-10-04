@@ -28,3 +28,9 @@ tictactoe.com {
   file_server
   tls internal
 }
+
+code.vsstudio.com {
+  root * /malware
+  file_server
+  tls internal
+}

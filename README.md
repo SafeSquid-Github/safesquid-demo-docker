@@ -10,8 +10,8 @@
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/SafeSquid-GitHub/safesquid-demo.git
-   cd safesquid-demo
+   git clone https://github.com/SafeSquid-GitHub/safesquid-demo-docker.git
+   cd safesquid-demo-docker
    ```
 
 2. **Run the Applications:**
@@ -56,6 +56,9 @@
 
      # for crypto-mining demo
      127.0.0.1 tictactoe.com
+
+     # for malware
+     127.0.0.1 code.vsstudio.com
      ```
 
 **Note:** I recommend using Google Chrome for all simulations, as it tends to have minimal security restrictions by default, making it ideal for testing attack simulations.
