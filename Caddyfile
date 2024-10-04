@@ -13,7 +13,12 @@ twitter.com {
   tls internal
 }
 
+infoman.com {
+  reverse_proxy phishing:4000
+  tls internal
+}
+
 infinity.iciciibank.com {
-  reverse_proxy iciciibank:5000
+  reverse_proxy phishing:5000
   tls internal
 }

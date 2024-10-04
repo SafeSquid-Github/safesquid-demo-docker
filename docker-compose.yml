@@ -1,5 +1,3 @@
-version: '3'
-
 services:
   csrf:
     build: ./csrf
@@ -7,9 +5,9 @@ services:
     networks:
       - caddy_network
   
-  iciciibank:
-    build: ./iciciibank
-    container_name: iciciibank_container
+  phishing:
+    build: ./phishing
+    container_name: phishing
     networks:
       - caddy_network
   
@@ -26,7 +24,7 @@ services:
       - caddy_network
     depends_on:
       - csrf
-      - iciciibank
+      - phishing
 
 networks:
   caddy_network:

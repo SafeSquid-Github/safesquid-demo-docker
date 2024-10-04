@@ -4,12 +4,8 @@ import os
 
 app = Flask(__name__, static_folder="public", static_url_path="")
 
-csv_file_path = os.getcwd() + "/data/phish_data.csv"
-json_file_path = os.getcwd() + "/data/phish_data.json"
-
-# create data directory if it doesn't exist
-if not os.path.exists("data"):
-    os.makedirs("data")
+csv_file_path = "/app/infoman/phish_data.csv"
+json_file_path = "/app/infoman/phish_data.json"
 
 
 def csv_to_json(csv_file_path):
