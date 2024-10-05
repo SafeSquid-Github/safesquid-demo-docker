@@ -26,18 +26,6 @@ services:
       - csrf
       - phishing
 
-  dnsmasq:
-    image: 4km3/dnsmasq
-    container_name: dnsmasq
-    restart: unless-stopped
-    ports:
-      - "53:53/udp"
-      - "53:53/tcp"
-    volumes:
-      - ./dnsmasq.conf:/etc/dnsmasq.conf
-    networks:
-      - caddy_network
-
 networks:
   caddy_network:
     driver: bridge
