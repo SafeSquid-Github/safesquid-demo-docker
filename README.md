@@ -3,7 +3,7 @@
 ### Prerequisites
 
 - Docker
-- Docker Compose
+- [ Docker Compose ](https://docs.docker.com/compose/install/linux/)
 
 ### Installation
 
